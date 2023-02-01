@@ -1,8 +1,44 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  height: 100vh;
+}
+
+body * {
+  margin: 30px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+p {
+  font-size: 30px;
 }
 
 a {
   color: #00B7FF;
+  font-size: 30px;
+}
+
+#header {
+  position: absolute;
+  top: 2vmin;
+  right: 2vmin;
+  font-size: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 2vmin;
+  left: 2vmin;
+}
+
+#footer {
+  font-size: 20px;
 }

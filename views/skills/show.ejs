@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= skill.name %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        body {
+            justify-content: flex-start;
+        }
+        p {
+            width: 50%;
+            line-height: 200%;
+        }
+    </style>
+  </head>
+  <body>
+    <%- include('../../partials/header') %>
+    <section>
+        <a href="/">Home</a> |
+        <a href="/skills">Developer skills list</a>
+    </section>
+    <h1><%= skill.name %></h1>
+    <h3>Description</h3>
+    <p><%= skill.detail %></p>
+    <%- include('../../partials/footer') %>
+  </body>
+</html>
