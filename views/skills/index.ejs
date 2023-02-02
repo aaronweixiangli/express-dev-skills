@@ -6,20 +6,52 @@
     <style>
       body {
         align-items: flex-start;
+        justify-content: flex-start;
+      }
+      ul {
+        margin-top: 0;
+        margin-bottom: 100px;
+      }
+      section {
+        margin-top: 2px;
+        margin-bottom: 1px;
+      }
+      .add-skill {
+        color: darkturquoise;
+      }
+      .delete-form {
+        display: inline-block;
+        margin-left: 2px;
+      }
+      li {
+        height: 60px;
       }
     </style>
   </head>
   <body>
-    <%- include('../../partials/header') %>
+    <%- include('../partials/header') %>
     <a href="/">Home</a>
-    <h1><%= title %></h1>
+    <section>
+      <h1><%= title %></h1>
+      <a href="/skills/new" class="add-skill">Add a skill</a>
+    </section>
     <ul>
       <% skills.forEach(function(s) { %>
         <li>
           <a href="/skills/<%= s.id %>"><%= s.name %></a>
+          <p>- <%= s.learned ? 'learned' : 'plan to learn' %></p>
+          <form
+              action="/skills/<%= s.id %>?_method=DELETE" 
+              method="POST"
+              class="delete-form" 
+              >
+              <button type="submit">Delete</button>
+          </form>
         </li>
       <% }); %>
     </ul>
-    <%- include('../../partials/footer') %>
+    
+
+    <%- include('../partials/footer') %>
   </body>
 </html>

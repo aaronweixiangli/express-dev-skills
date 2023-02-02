@@ -3,12 +3,17 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      body {
+        height: 100vh;
+      }
+    </style>
   </head>
   <body>
-    <%- include('../partials/header') %>
+    <%- include('./partials/header') %>
     <h1><%= title %></h1>
     <p>Checkout the common developer skills I learned and plan to learn</p>
     <a href="/skills">Developer skills</a>
-    <%- include('../partials/footer') %>
+    <%- include('./partials/footer') %>
   </body>
 </html>

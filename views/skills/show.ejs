@@ -10,11 +10,12 @@
         p {
             width: 50%;
             line-height: 200%;
+            text-align: center;
         }
     </style>
   </head>
   <body>
-    <%- include('../../partials/header') %>
+    <%- include('../partials/header') %>
     <section>
         <a href="/">Home</a> |
         <a href="/skills">Developer skills list</a>
@@ -22,6 +23,9 @@
     <h1><%= skill.name %></h1>
     <h3>Description</h3>
     <p><%= skill.detail %></p>
-    <%- include('../../partials/footer') %>
+    <h3>Status</h3>
+    <p><%= skill.learned ? 'Learned' : 'Plan to learn' %></p>
+    <a href="/skills/<%= skill.id %>/edit">Edit skill</a>
+    <%- include('../partials/footer') %>
   </body>
 </html>

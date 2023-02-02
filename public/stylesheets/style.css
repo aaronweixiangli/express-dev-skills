@@ -6,7 +6,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: antiquewhite;
-  height: 100vh;
 }
 
 body * {
@@ -19,24 +18,27 @@ h1 {
 
 p {
   font-size: 30px;
+  display: inline;
 }
 
 a {
   color: #00B7FF;
   font-size: 30px;
+  z-index: 2;
 }
 
 #header {
-  position: absolute;
+  position: fixed;
   top: 2vmin;
   right: 2vmin;
   font-size: 20px;
 }
 
 footer {
-  position: absolute;
-  bottom: 2vmin;
+  position: fixed;
+  bottom: 0.8vmin;
   left: 2vmin;
+  margin-bottom: 0;
 }
 
 #footer {
